@@ -8,8 +8,12 @@ import java.util.Scanner;
  */
 public class RemoveNode {
     
+    static Node root;
+    static Scanner sc;
+    
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        root = new Node("Root");
+        sc = new Scanner(System.in);
         int op = -1;
         while(op != 0){
             System.out.println("Presiona 1) para agregar un nodo.");
@@ -34,7 +38,9 @@ public class RemoveNode {
     }
     
     private static void addNode(){
-        
+        System.out.print("Ingresa la informacion del nodo: ");
+        String data = sc.nextLine();
+        root.addNode(root, data);
     }
     
     private static void delNode(){

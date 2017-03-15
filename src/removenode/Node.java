@@ -5,10 +5,20 @@ package removenode;
  */
 public class Node {
     
-    Node link;
+    private Node link;
+    private String data;
 
-    public Node(Node link) {
-        this.link = link;
+    public Node(String data) {
+        this.data = data;
+        link = null;
+    }
+
+    public void addNode(Node node, String data){
+        while(node.getLink() != null){
+            node = node.getLink();
+        }
+        node.setLink(new Node(data));
+        System.out.println("Nodo agregado despues de "+node.getData());
     }
 
     public Node getLink() {
@@ -17,6 +27,14 @@ public class Node {
 
     public void setLink(Node link) {
         this.link = link;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
     }
     
 }
