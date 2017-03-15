@@ -16,6 +16,7 @@ public class RemoveNode {
         sc = new Scanner(System.in);
         int op = -1;
         while(op != 0){
+            System.out.println("");
             System.out.println("Presiona 1) para agregar un nodo.");
             System.out.println("Presiona 2) para buscar y eliminar un nodo.");
             System.out.println("Preciosa 3) para mostrar toda la lista.");
@@ -44,15 +45,17 @@ public class RemoveNode {
     private static void addNode(){
         System.out.print("Ingresa la informacion del nodo: ");
         String data = sc.nextLine();
-        root.addNode(root, data);
+        root.addNode(data);
     }
     
     private static void delNode(){
-        
+        System.out.print("Ingrese la informacion del nodo a eliminar: ");
+        String data = sc.nextLine();
+        root.delNode(data);
     }
     
     private static void printList(){
-        root.printList(root);
+        root.printList();
     }
     
 }
