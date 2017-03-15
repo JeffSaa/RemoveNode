@@ -18,6 +18,7 @@ public class RemoveNode {
         while(op != 0){
             System.out.println("Presiona 1) para agregar un nodo.");
             System.out.println("Presiona 2) para buscar y eliminar un nodo.");
+            System.out.println("Preciosa 3) para mostrar toda la lista.");
             System.out.println("Presiona 0) para salir.");
             System.out.print("Que quieres hacer? ");
             op = Integer.parseInt(sc.nextLine());
@@ -27,6 +28,9 @@ public class RemoveNode {
                     break;
                 case 2:
                     delNode();
+                    break;
+                case 3:
+                    printList();
                     break;
                 case 0:
                     break;
@@ -45,6 +49,10 @@ public class RemoveNode {
     
     private static void delNode(){
         
+    }
+    
+    private static void printList(){
+        root.printList(root);
     }
     
 }

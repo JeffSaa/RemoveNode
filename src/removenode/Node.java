@@ -20,6 +20,16 @@ public class Node {
         node.setLink(new Node(data));
         System.out.println("Nodo agregado despues de "+node.getData());
     }
+    
+    public void printList(Node node){
+        int i = 0;
+        while(node.getLink() != null){
+            System.out.println(i+") "+node.getData());
+            node = node.getLink();
+            i++;
+        }
+        System.out.println(i+") "+node.getData());
+    }
 
     public Node getLink() {
         return link;
